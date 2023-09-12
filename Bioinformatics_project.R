@@ -24,8 +24,6 @@ library("ggplot2")
 library("mclust")
 library("ggplot2")
 
-# This code follows the steps proposed in the guidelines of the project
-# for this reason (since I chose to do the project individually and not in a group) the steps 7, 9 and 10 aren't mentioned
 
 # Step 1) Download PRAD dataset from TCGA
 
@@ -247,11 +245,11 @@ metrics_pam_int <- mclustcomp(pam_res_int_clustering, labels, types = types)
 metrics_df <- data.frame(
   Approach = c("SNF integration", "Avg integration", "miRNA", "mRNA", "proteins"),
   AdjRand = c(metrics_pam_int$scores[which(metrics_pam_int$types == "adjrand")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "adjrand")], 
-              source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "adjrand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")]), 
+              source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "adjrand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")], source_metrics[[3]]$scores[which(source_metrics[[3]]$types == "adjrand")]), 
   NMI = c(metrics_pam_int$scores[which(metrics_pam_int$types == "nmi1")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "nmi1")],
-          source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")]),
+          source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")], source_metrics[[3]]$scores[which(source_metrics[[3]]$types == "nmi1")]),
   Rand = c(metrics_pam_int$scores[which(metrics_pam_int$types == "rand")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "rand")],
-           source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "rand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "rand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "rand")])
+           source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "rand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "rand")], source_metrics[[3]]$scores[which(source_metrics[[3]]$types == "rand")])
 )
 
 # Print the table
