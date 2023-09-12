@@ -249,7 +249,7 @@ metrics_df <- data.frame(
   AdjRand = c(metrics_pam_int$scores[which(metrics_pam_int$types == "adjrand")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "adjrand")], 
               source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "adjrand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")]), 
   NMI = c(metrics_pam_int$scores[which(metrics_pam_int$types == "nmi1")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "nmi1")],
-          source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "adjrand")]),
+          source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "nmi1")]),
   Rand = c(metrics_pam_int$scores[which(metrics_pam_int$types == "rand")], metrics_pam_avg$scores[which(metrics_pam_avg$types == "rand")],
            source_metrics[[1]]$scores[which(source_metrics[[1]]$types == "rand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "rand")], source_metrics[[2]]$scores[which(source_metrics[[2]]$types == "rand")])
 )
