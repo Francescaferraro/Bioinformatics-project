@@ -24,6 +24,8 @@ library("ggplot2")
 library("mclust")
 library("ggplot2")
 
+# This code follows the steps proposed in the guidelines of the project
+# for this reason (since I chose to do the project individually and not in a group) the steps 7, 9 and 10 aren't mentioned
 
 # Step 1) Download PRAD dataset from TCGA
 
